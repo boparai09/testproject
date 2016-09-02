@@ -1,4 +1,4 @@
-# Trade App — Initial version of apps
+﻿# Student APP — Initial version of apps
 
 This project is an basic application skeleton using [AngularJS](http://angularjs.org/).
 This AngularJS application is preconfigured to install the Angular framework and a bunch of development 
