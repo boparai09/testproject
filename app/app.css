@@ -1,0 +1,183 @@
+/* app css stylesheet */
+
+body {
+    background: #f2f2f2;
+    font-family: 'proxima-nova-soft', sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+    float: right;
+}
+
+.menu:before {
+    content: "[";
+}
+
+.menu:after {
+    content: "]";
+}
+
+.menu > li {
+    display: inline;
+}
+
+.menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+}
+
+.loading {
+    display: flex;
+    justify-content: center; /*to keep the loading image in center*/
+    z-index: 1; /* Sit on top */
+}
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    opacity: 0.6;
+    background-color: #eeeeee;
+    overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: fixed;
+    top: 50%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    margin-top: 0;
+
+}
+
+.column {
+    padding: 0 5px;
+    -webkti-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+    height: 260px;
+    width: 100%;
+}
+
+.post-module {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #FFFFFF;
+    height: 100%;
+    min-width: 270px;
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+}
+.hover {
+    -webkit-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+}
+.post-module .post-content {
+    bottom: 0;
+    background: #FFFFFF;
+    width: 100%;
+    padding: 15px 30px;
+    -webkti-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    -moz-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    -ms-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    -o-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+}
+.post-module .post-content .category {
+    text-transform: uppercase;
+}
+.post-module .post-content .title {
+    margin: 0;
+    padding: 0 0 10px;
+    color: #333333;
+    font-size: 26px;
+    font-weight: 700;
+}
+.post-module .post-content .sub_title {
+    margin: 0;
+    padding: 0 0 20px;
+    color: #e74c3c;
+    font-size: 20px;
+    font-weight: 400;
+}
+.post-module .post-content .description {
+    display: block;
+    max-height: 0;
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.8em;
+    -webkit-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    -moz-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    -ms-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    -o-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    overflow: hidden;
+}
+.post-module .post-content .post-meta {
+    margin: 30px 0 0;
+    color: #999999;
+}
+.post-module .post-content .post-meta .action {
+    margin: 0 16px 0 0;
+    cursor: pointer;
+}
+.post-module .post-content .post-meta a {
+    color: #999999;
+    text-decoration: none;
+}
+.hover .post-content .description {
+    display: block !important;
+    max-height: 100px !important;
+    opacity: 1 !important;
+}
+
+.info {
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+}
+.info h1 {
+    margin: 0 0 15px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: #333333;
+}
+.info span {
+    color: #666666;
+    font-size: 12px;
+}
+.info span a {
+    color: #000000;
+    text-decoration: none;
+}
+.info span .fa {
+    color: #e74c3c;
+}
+
+.data-container{
+    background: #ffffff;
+    padding: 5px;
+}
